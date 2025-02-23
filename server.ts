@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
 import noteRoutes from "./routes/noteRoutes";
+import authRoutes from "./routes/authRoutes";
 
 // Load environment variables
 dotenv.config();
@@ -22,6 +23,7 @@ mongoose
 
 // routes
 app.use("/api/v1/notes", noteRoutes)
+app.use("/api/v1/auth", authRoutes)
 
 
 // Start Server
